@@ -9,6 +9,7 @@ import LoadingSpinner from "@/utils/LoadingSpinner";
 import { useRouter } from "next/router";
 import baseUrl from "@/utils/baseUrl";
 
+
 const Photo = ({ user }) => {
 	const { lisbo_users_token } = parseCookies();
 	const router = useRouter();
