@@ -5,7 +5,7 @@ let sequelize;
 if (process.env.NODE_ENV === "production") {
 	sequelize = new Sequelize(config.production);
 } else {
-	sequelize = new Sequelize(config.development);
+	sequelize = new Sequelize(config.production);
 }
 
 const connection = sequelize;
