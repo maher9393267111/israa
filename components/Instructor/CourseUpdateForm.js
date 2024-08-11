@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 import controls from "@/utils/RTEControl";
 import dynamic from "next/dynamic";
-const RichTextEditor = dynamic(() => import("@mantine/rte"), {
-	ssr: false,
-	loading: () => null,
-});
+import MarkdownInput from "components/Globall/Markdown";
+// const RichTextEditor = dynamic(() => import("@mantine/rte"), {
+// 	ssr: false,
+// 	loading: () => null,
+// });
 import axios from "axios";
 import { parseCookies } from "nookies";
 import baseUrl from "@/utils/baseUrl";
@@ -403,7 +404,7 @@ const CourseUpdateForm = ({ courseData }) => {
 						<label className="form-label fw-semibold">
 							Overview
 						</label>
-						<RichTextEditor
+						{/* <RichTextEditor
 							controls={controls}
 							value={course.overview}
 							onChange={(e) =>
@@ -412,7 +413,10 @@ const CourseUpdateForm = ({ courseData }) => {
 									overview: e,
 								}))
 							}
-						/>
+						/> */}
+
+<MarkdownInput desc={course.overview} setCourse={setCourse} type ='overview' />
+
 					</div>
 				</div>
 				<div className="col-md-6">
@@ -420,7 +424,7 @@ const CourseUpdateForm = ({ courseData }) => {
 						<label className="form-label fw-semibold">
 							Requirements
 						</label>
-						<RichTextEditor
+						{/* <RichTextEditor
 							controls={controls}
 							value={course.requirements}
 							onChange={(e) =>
@@ -429,7 +433,8 @@ const CourseUpdateForm = ({ courseData }) => {
 									requirements: e,
 								}))
 							}
-						/>
+						/> */}
+						<MarkdownInput desc={course.requirements} setCourse={setCourse} type ='requirements' />
 					</div>
 				</div>
 				<div className="col-md-6">
@@ -437,7 +442,7 @@ const CourseUpdateForm = ({ courseData }) => {
 						<label className="form-label fw-semibold">
 							What You Will Learn
 						</label>
-						<RichTextEditor
+						{/* <RichTextEditor
 							controls={controls}
 							value={course.what_you_will_learn}
 							onChange={(e) =>
@@ -446,7 +451,8 @@ const CourseUpdateForm = ({ courseData }) => {
 									what_you_will_learn: e,
 								}))
 							}
-						/>
+						/> */}
+							<MarkdownInput desc={course.what_you_will_learn} setCourse={setCourse} type ='what_you_will_learn' />
 					</div>
 				</div>
 				<div className="col-md-6">
@@ -454,7 +460,7 @@ const CourseUpdateForm = ({ courseData }) => {
 						<label className="form-label fw-semibold">
 							Who Is This Course For?
 						</label>
-						<RichTextEditor
+						{/* <RichTextEditor
 							controls={controls}
 							value={course.who_is_this_course_for}
 							onChange={(e) =>
@@ -463,7 +469,9 @@ const CourseUpdateForm = ({ courseData }) => {
 									who_is_this_course_for: e,
 								}))
 							}
-						/>
+						/> */}
+
+<MarkdownInput desc={course.who_is_this_course_for} setCourse={setCourse} type ='who_is_this_course_for' />
 					</div>
 				</div>
 

@@ -16,9 +16,7 @@
 	},
 	"dependencies": {
 		"@etchteam/next-pagination": "^3.5.4",
-		"@mantine/core": "^7.12.0",
-		"@mantine/hooks": "^7.12.0",
-		"@mantine/rte": "^5.10.5",
+		
 		"axios": "^0.27.2",
 		"bcrypt": "^5.0.1",
 		"draft-js": "^0.11.7",

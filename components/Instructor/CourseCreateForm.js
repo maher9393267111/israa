@@ -2,10 +2,10 @@ import React, { useState, useEffect } from "react";
 import controls from "@/utils/RTEControl";
 import dynamic from "next/dynamic";
 import MarkdownInput from "components/Globall/Markdown";
-const RichTextEditor = dynamic(() => import("@mantine/rte"), {
-	ssr: false,
-	loading: () => null,
-});
+// const RichTextEditor = dynamic(() => import("@mantine/rte"), {
+// 	ssr: false,
+// 	loading: () => null,
+// });
 import axios from "axios";
 import { parseCookies } from "nookies";
 import baseUrl from "@/utils/baseUrl";
