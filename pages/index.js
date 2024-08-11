@@ -20,6 +20,7 @@ function Index({ courses, user }) {
   return (
     <div>
       <Navbar user={user} />
+      {user?.role}
 
       <MainBanner user={user} />
 
@@ -49,7 +50,7 @@ export async function getServerSideProps() {
   // Fetch data from external API
   const res = await fetch(`${baseUrl}/api/popular-courses`);
   const { courses } = await res.json();
-
+console.log(courses ,res.json())
   // Pass data to the page via props
   return { props: { courses: courses || [] } };
 }

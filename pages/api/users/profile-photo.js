@@ -43,7 +43,7 @@ const userProfilePhoto = async (req, res) => {
 				first_name: updateUser.first_name,
 				last_name: updateUser.last_name,
 				email: updateUser.email,
-				role: updateUser.role,
+				role: updateUser?.role,
 				profile_photo: updateUser.profile_photo,
 			},
 			process.env.JWT_SECRET,

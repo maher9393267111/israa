@@ -75,8 +75,9 @@ const initUser = (sequelize, Types) => {
       },
       role: {
         type: Types.ENUM("student", "admin", "instructor"),
-        defaultValue: "student",
+        defaultValue: "instructor",
       },
+      
 
       email_confirmed: {
         type: Types.BOOLEAN,
@@ -149,7 +150,7 @@ const initUser = (sequelize, Types) => {
   );
 
     // Sync the User model with the database
-    // User.sync({ alter: true });
+    User.sync({ alter: true });
 
     return User;
 };

@@ -58,7 +58,7 @@ const userSignin = async (req, res) => {
 					first_name: user.first_name,
 					last_name: user.last_name,
 					email: user.email,
-					role: user.role,
+					role: user?.role,
 					profile_photo: user.profile_photo,
 				},
 				process.env.JWT_SECRET,

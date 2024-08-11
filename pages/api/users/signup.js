@@ -75,7 +75,7 @@ const userSignup = async (req, res) => {
 				first_name: newUser.first_name,
 				last_name: newUser.last_name,
 				email: newUser.email,
-				role: newUser.role,
+				role: newUser?.role,
 				profile_photo: newUser.profile_photo,
 			},
 			process.env.JWT_SECRET,
