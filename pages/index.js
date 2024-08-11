@@ -13,12 +13,12 @@ import OurLanguageCourses from "@/components/Index/OurLanguageCourses";
 import HowToApply from "@/components/Index/HowToApply";
 import { useSelector } from 'react-redux';
 function Index({ courses, user }) {
-  const posts = useSelector((state) => state?.cart?.discount);
+  // const posts = useSelector((state) => state?.cart?.discount);
 
 
 
   return (
-    <>
+    <div>
       <Navbar user={user} />
 
       <MainBanner user={user} />
@@ -40,7 +40,7 @@ function Index({ courses, user }) {
       <Partner />
 
       <Footer />
-    </>
+    </div>
   );
 }
 
