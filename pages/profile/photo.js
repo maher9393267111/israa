@@ -18,6 +18,7 @@ const Photo = ({ user }) => {
 	const [profilePreview, setProfilePreview] = React.useState("");
 
 	const handleChange = (e) => {
+	
 		const { files } = e.target;
 
 		const profilePhotoSize = files[0].size / 1024 / 1024;
