@@ -38,6 +38,7 @@ const handlePostRequest = async (req, res) => {
     for (const cartItem of cartItems) {
       const { id: courseId, price } = cartItem;
 
+      
       // Create an enrolment
       await Enrolment.create({
         bought_price: price,
