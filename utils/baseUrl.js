@@ -1,6 +1,6 @@
 const baseUrl =
 	process.env.NODE_ENV === "production"
-		? "https://lisbo-react.envytheme.com"
+		? "https://academy-project-nu.vercel.app"
 		: "http://localhost:3000";
 
 export default baseUrl;
