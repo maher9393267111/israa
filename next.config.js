@@ -14,7 +14,7 @@ const nextConfig = {
 
 	// Update here your access credential
 	env: {
-		JWT_SECRET: "asdfghjklnbvcxzqwertyuiopmkioprewqasderfgnujm",
+		JWT_SECRET: "2854875",
 		AWS_SES_USER: "<Update here AWS_SES_USER>",
 		AWS_SES_PASSWORD: "<Update here AWS_SES_PASSWORD>",
 		CLOUD_NAME: "dcbtaxeld",

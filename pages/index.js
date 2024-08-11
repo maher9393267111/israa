@@ -20,7 +20,7 @@ function Index({ courses, user }) {
   return (
     <div>
       <Navbar user={user} />
-      {user?.role}
+      {/* {user?.role} */}
 
       <MainBanner user={user} />
 
