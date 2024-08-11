@@ -15,7 +15,7 @@ export default {
 		database: process.env.DB_NAME_PRODUCTION,
 		host: process.env.DB_HOSTNAME,
 		port: process.env.DB_PORT_PROD,
-		logging: false,
+		logging: true,
 		dialect: "mysql",
 		dialectModule: require('mysql2'),
 	},
