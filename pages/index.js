@@ -3,7 +3,7 @@ import Navbar from "@/components/_App/Navbar";
 import MainBanner from "@/components/Index/MainBanner";
 import Partner from "@/components/Index/Partner";
 import WhyChooseUs from "@/components/Index/WhyChooseUs";
-import PopularCourses from "@/components/Index/PopularCourses";
+// import PopularCourses from "@/components/Index/PopularCourses";
 import FunFacts from "@/components/Index/FunFacts";
 import FeedbackSlider from "@/components/Index/FeedbackSlider";
 import SubscribeForm from "@/components/Common/SubscribeForm";
@@ -30,7 +30,7 @@ function Index({ courses, user }) {
 
       <FeedbackSlider />
 
-      <PopularCourses user={user} courses={courses} />
+      {/* <PopularCourses user={user} courses={courses} /> */}
 
       <FunFacts />
 
@@ -45,26 +45,23 @@ function Index({ courses, user }) {
   );
 }
 
-export async function getServerSideProps() {
-  try {
-    // Fetch data from external API
-    const res = await fetch(`${baseUrl}/api/popular-courses`);
-    const { courses } = await res.json();
-    console.log(courses, res.json());
+// export async function getServerSideProps() {
+//   try {
+//     // Fetch data from external API
+//     const res = await fetch(`${baseUrl}/api/popular-courses`);
+//     const { courses } = await res.json();
+//     console.log(courses, res.json());
 
-    // Pass data to the page via props
-    return { props: { courses: courses || [] } };
-  } catch (error) {
-    console.error('An error occurred while fetching data:', error);
-    // You can add additional error handling logic here, such as:
-    // - Logging the error
-    // - Returning a fallback or default data set
-    // - Redirecting the user to an error page
-    return { props: { courses: [] } };
-  }
-}
+//     // Pass data to the page via props
+//     return { props: { courses: courses || [] } };
+//   } catch (error) {
+//     console.error('An error occurred while fetching data:', error);
 
-export default Index;
+//     return { props: { courses: [] } };
+//   }
+// }
+
+// export default Index;
 
 
 
