@@ -59,9 +59,10 @@ const PopularCourses = ({ user, courses }) => {
             </p>
           </div>
 
+
           <div className="row justify-content-center">
             {courses &&
-              courses.map((course) => (
+              courses?.map((course) => (
                 <CourseCard
                   key={course.id}
                   {...course}

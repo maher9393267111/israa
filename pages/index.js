@@ -45,14 +45,38 @@ function Index({ courses, user }) {
   );
 }
 
-// This gets called on every request
 export async function getServerSideProps() {
-  // Fetch data from external API
-  const res = await fetch(`${baseUrl}/api/popular-courses`);
-  const { courses } = await res.json();
-console.log(courses ,res.json())
-  // Pass data to the page via props
-  return { props: { courses: courses || [] } };
+  try {
+    // Fetch data from external API
+    const res = await fetch(`${baseUrl}/api/popular-courses`);
+    const { courses } = await res.json();
+    console.log(courses, res.json());
+
+    // Pass data to the page via props
+    return { props: { courses: courses || [] } };
+  } catch (error) {
+    console.error('An error occurred while fetching data:', error);
+    // You can add additional error handling logic here, such as:
+    // - Logging the error
+    // - Returning a fallback or default data set
+    // - Redirecting the user to an error page
+    return { props: { courses: [] } };
+  }
 }
 
 export default Index;
+
+
+
+
+// This gets called on every request
+// export async function getServerSideProps() {
+//   // Fetch data from external API
+//   const res = await fetch(`${baseUrl}/api/popular-courses`);
+//   const { courses } = await res.json();
+// console.log(courses ,res.json())
+//   // Pass data to the page via props
+//   return { props: { courses: courses || [] } };
+// }
+
+// export default Index;
