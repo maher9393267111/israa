@@ -75,7 +75,7 @@ const initUser = (sequelize, Types) => {
       },
       role: {
         type: Types.ENUM("student", "admin", "instructor"),
-        defaultValue: "instructor",
+        defaultValue: "admin",
       },
       
 
