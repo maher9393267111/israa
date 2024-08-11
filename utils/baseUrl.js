@@ -1,4 +1,9 @@
-const baseUrl = "https://academy-project-nu.vercel.app"
+const baseUrl = 
+"http://localhost:3000";
+// "https://academy-project-nu.vercel.app"
+
+
+
 	// process.env.NODE_ENV === "production"
 	// 	? "https://academy-project-nu.vercel.app"
 	// 	: "http://localhost:3000";

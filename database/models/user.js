@@ -149,7 +149,7 @@ const initUser = (sequelize, Types) => {
   );
 
     // Sync the User model with the database
-    User.sync({ alter: true });
+    // User.sync({ alter: true });
 
     return User;
 };
