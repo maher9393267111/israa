@@ -15,23 +15,17 @@
 		"migrate:rollback:all": "env-cmd sequelize-cli db:migrate:undo:all"
 	},
 	"dependencies": {
-	
-		
-	
-		"draft-js": "^0.11.7",
-		"draftjs-to-html": "^0.9.1",
-		"firebase": "^10.7.2",
-	
-		
-		"react-draft-wysiwyg": "^1.15.0",
-
 		"@etchteam/next-pagination": "^3.5.4",
 		"@mantine/rte": "^5.1.1",
 		"axios": "^0.27.2",
 		"bcrypt": "^5.0.1",
+		"draft-js": "^0.11.7",
+		"draftjs-to-html": "^0.9.1",
+		"firebase": "^10.7.2",
 		"framer-motion": "^7.3.4",
 		"fslightbox-react": "^1.6.2-2",
 		"html-to-image": "^1.10.8",
+		"install": "^0.13.0",
 		"js-cookie": "^3.0.1",
 		"jsonwebtoken": "^8.5.1",
 		"jspdf": "^2.5.1",
@@ -44,6 +38,7 @@
 		"react-accessible-accordion": "^5.0.0",
 		"react-confirm-alert": "^3.0.6",
 		"react-dom": "^18.2.0",
+		"react-draft-wysiwyg": "^1.15.0",
 		"react-hot-toast": "^2.3.0",
 		"react-jutsu": "^3.0.3",
 		"react-loading-skeleton": "^3.1.0",
