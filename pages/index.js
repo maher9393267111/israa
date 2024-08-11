@@ -45,6 +45,8 @@ function Index({ courses, user }) {
   );
 }
 
+export default Index;
+
 // export async function getServerSideProps() {
 //   try {
 //     // Fetch data from external API
